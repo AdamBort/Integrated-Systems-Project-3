@@ -1,0 +1,54 @@
+<html>
+<head> 
+
+  <title>Remind ME</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Development version of VueJS -->
+  <script src="https://unpkg.com/vue@next"></script> 
+  <!-- Axios for making HTTP requests.  -->
+  <script src="https://unpkg.com/axios@0.24.0/dist/axios.min.js"></script>
+  
+  <!-- Garden Gnome Font via monotype. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Base 64 inline favicon generated at https://png-pixel.com/ -->
+  <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNMPvnxPwAG0gMeEo1rnwAAAABJRU5ErkJggg==">
+
+  <!-- Our VueJS app -->
+  <script defer src="script.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+<div id="Title">RemindME</div>
+<body id="app">
+ <div class="backgroundCircle"id="circle1"></div>
+ <div class="backgroundCircle"id="circle2"></div>
+    
+  <!-- Ask for the user's name if needed -->
+<!-- https://stackabuse.com/axios-multipart-form-data-sending-file-through-a-form-with-javascript/ -->
+    <a class="logo" href="/">  </a>
+   
+    <form id="centerLogin" method="post"  @submit.prevent="createMessage">
+
+      <label> Phone Number</label><br>
+      <input type="tel" v-model="phoneNumber" placeholder="1231231234" required><br>
+  
+      <label> Hours Until Reminder</label><br>
+      <input type="number" class="without_ampm" v-model="timeScheduled" step="0.1" placeholder="1.5" required><br>
+      <label>Message</label> <br>
+      <input type="text" v-model="enteredMessage" placeholder="Lunch with Stacy" required> <br>
+      <button id="button">Set Reminder</button> 
+    </form>
+    <section v-if="notice" id="notice">
+    
+      <div> {{ notice }} </div>
+    </section>
+
+
+</body>
+</html>

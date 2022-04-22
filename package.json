@@ -1,0 +1,25 @@
+{
+  "name": "plot",
+  "version": "1.0.0",
+  "description": "This app lets you search for plants on the OpenFarm API and add them to a personalized garden \"plot\" that is tied to your name. The list is stored in MongoDB by means of GET and POST endpoints, created with Express and NodeJS.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongodb": "^4.5.0",
+    "node-cron": "^3.0.0",
+    "qs": "^6.10.3",
+    "twilio": "^3.76.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
